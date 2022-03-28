@@ -98,7 +98,7 @@
    98  dpkg-query -l | less
    99  apt-get clean all
   100  df -klhBM /
-  101  echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdmVIpqNST2VXRej361B0ifG+Aw/XVmcunodIlj9lu7c7FtGQeHZTd6FXEuYQzghI4ZZkqoRpnXlBW3OGT2IIUEjQ6g86x6YlyenR9f+ieUbY+kW94oHqdJzRgKJ+LqXhN0r7UGygyd9hv5aUQ9143s/4Zo40sWzyZioIFQvEYSfO0b1CxrnvOYd2Boi1D9lh/l5jAyjJ9bRRkFGWmJqdc3dm8fuculZ0BppWztw1ogPSKiBX7uvl62c1k3vqcHCDYSvHakJm5d4GGcs0OJNqsFfFcoqIXIr1W6wqIopgptWz1jgPrm1QE1MlG4/+iWkVztwewOqAWQq6bG5zg0x/F johnsond@anaphora' >> .ssh/authorized_keys 
+  101  echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdmVIpqNST2VXRej361B0ifG+Aw/XVmcunodIlj9lu7c7FtGQeHZTd6FXEuYQzghI4ZZkqoRpnXlBW3OGT2IIUEjQ6g86x6YlyenR9f+ieUbY+kW94oHqdJzRgKJ+LqXhN0r7UGygyd9hv5aUQ9143s/4Zo40sWzyZioIFQvEYSfO0b1CxrnvOYd2Boi1D9lh/l5jAyjJ9bRRkFGWmJqdc3dm8fuculZ0BppWztw1ogPSKiBX7uvl62c1k3vqcHCDYSvHakJm5d4GGcs0OJNqsFfFcoqIXIr1W6wqIopgptWz1jgPrm1QE1MlG4/+iWkVztwewOqAWQq6bG5zg0xnh/F johnsond@anaphora' >> .ssh/authorized_keys 
   102  jove /etc/ssh/sshd_config
   103  touch .joverc
   104  jove /etc/ssh/sshd_config
