@@ -1,0 +1,304 @@
+    1  emacs -nw /etc/default/grub.d/init-select.cfg
+    2  nano /etc/default/grub.d/init-select.cfg
+    3  nano /etc/default/grub
+    4  update-grub
+    5  reboot
+    6  nano /etc/default/grub
+    7  update-grub
+    8  df -klh /
+    9  apt-get clean all
+   10  df -klh /
+   11  rm -fv /var/lib/apt/lists/*
+   12  df -klh /
+   13  df -klhM /
+   14  df -klhb M /
+   15  df -klhu M /
+   16  man df
+   17  df -klhBM /
+   18  ls
+   19  dpkg-query -l | grep linux-
+   20  apt-cache search xen
+   21  dpkg-query -l
+   22  ls
+   23  cd /var
+   24  fgrep -rn New .
+   25  fgrep -rn New . | grep OSDI
+   26  cd
+   27  df -klhBM /
+   28  scp pc15-fort.emulab.net:/usr/local/etc/emulab/tmcc.bin /tmp
+   29  /tmp/tmcc.bin 
+   30  /tmp/tmcc.bin -s boss.emulab.net state BOOTING
+   31  /tmp/tmcc.bin -s boss.emulab.net state TBSETUP
+   32  /tmp/tmcc.bin -s boss.emulab.net state ISUP
+   33  dpkg-query -l
+   34  dpkg-query -l | cut -f2
+   35  dpkg-query -l | cut -d' ' -f2
+   36  dpkg-query -l | cut -f2
+   37  dpkg-query -l | cut -f1
+   38  dpkg-query -l | cut -f3
+   39  dpkg-query -l | cut -f4
+   40  dpkg-query -l | awk '{print $2}'
+   41  dpkg-query -l | grep ii | awk '{print $2}'
+   42  dpkg-query -l | grep ii | awk '{print $2}' | less
+   43  dpkg-query -l | grep ii | awk '{print $2}' > pkgs.u20
+   44  diff -u pkgs.u18 pkgs.u20 | less
+   45  diff -u pkgs.u18 pkgs.u20 | grep ^+
+   46  diff -u pkgs.u18 pkgs.u20 | less
+   47  fg
+   48  diff -u pkgs.u18 pkgs.u20 | grep ^+
+   49  diff -u pkgs.u18 pkgs.u20 | grep ^+ | less
+   50  less pkgs.u18 
+   51  diff -u pkgs.u18 pkgs.u20 | grep ^+ | less
+   52  less pkgs.u20 
+   53  apt-get clean all
+   54  df -klhBM
+   55  ls -l /var/lib/apt/lists/
+   56  du -klh /var/lib/apt/lists
+   57  rm -f /var/lib/apt/lists/*Packages*
+   58  du -klh /var/lib/apt/lists
+   59  foooo
+   60  ls -l /var/lib/apt/lists/
+   61  rm -f /var/lib/apt/lists/*{Packages,InRelease,Translation}*
+   62  ls -l /var/lib/apt/lists/
+   63  foooo
+   64  dpkg-query -l | grep ii | awk '{print $2}' > pkgs-minimal.u20
+   65  ls
+   66  df -klhBM /
+   67  diff -u pkgs.u18 pkgs.u20 | grep ^- | less
+   68  diff -u pkgs.u18 pkgs.u20 | grep ^- | tr '-' ''
+   69  man tr
+   70  diff -u pkgs.u18 pkgs.u20 | grep ^- | tr -- '-' ''
+   71  diff -u pkgs.u18 pkgs.u20 | grep ^- | tr --- '-' ''
+   72  diff -u pkgs.u18 pkgs.u20 | grep ^- | tr -- '-'
+   73  man tr
+   74  diff -u pkgs.u18 pkgs.u20 | grep ^- | tr -t -- '-'
+   75  diff -u pkgs.u18 pkgs.u20 | grep ^- | tr -t -- '-' ''
+   76  man tr
+   77  diff -u pkgs.u18 pkgs.u20 | grep ^- | tr -d -- '-'
+   78  diff -u pkgs.u18 pkgs.u20 | grep ^- | sed -r -e 's|^-||'
+   79  diff -u pkgs.u18 pkgs.u20 | grep ^- | sed -r -e 's|^-||' | xargs
+   80  diff -u pkgs.u18 pkgs.u20 | grep ^- | sed -r -e 's|^-||' | sed -r -e 's|:amd64||' | xargs
+   81  rm -f /var/lib/apt/lists/*{Packages,InRelease,Translation}*
+   82  df -klhBM /
+   83  rm -f /var/lib/apt/lists/*{Packages,InRelease,Translation}*
+   84  df -klhBM /
+   85  apt-get clean all
+   86  df -klhBM /
+   87  fooo
+   88  dpkg-query -l | less
+   89  apt-get autoremove --purge libx11-6
+   90  apt-get autoremove --purge xauth
+   91  apt-get autoremove --purge libx11-6
+   92  apt-get clean all
+   93  df -klhBM /
+   94  dpkg-query -l | less
+   95  apt-get autoremove --purge libx11-data 
+   96  apt-get autoremove --purge libx11-6 libx11-data libxcb1 libxdmcp6 
+   97  apt-get autoremove --purge
+   98  dpkg-query -l | less
+   99  apt-get clean all
+  100  df -klhBM /
+  101  echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdmVIpqNST2VXRej361B0ifG+Aw/XVmcunodIlj9lu7c7FtGQeHZTd6FXEuYQzghI4ZZkqoRpnXlBW3OGT2IIUEjQ6g86x6YlyenR9f+ieUbY+kW94oHqdJzRgKJ+LqXhN0r7UGygyd9hv5aUQ9143s/4Zo40sWzyZioIFQvEYSfO0b1CxrnvOYd2Boi1D9lh/l5jAyjJ9bRRkFGWmJqdc3dm8fuculZ0BppWztw1ogPSKiBX7uvl62c1k3vqcHCDYSvHakJm5d4GGcs0OJNqsFfFcoqIXIr1W6wqIopgptWz1jgPrm1QE1MlG4/+iWkVztwewOqAWQq6bG5zg0x/F johnsond@anaphora' >> .ssh/authorized_keys 
+  102  jove /etc/ssh/sshd_config
+  103  touch .joverc
+  104  jove /etc/ssh/sshd_config
+  105  nano /etc/ssh/sshd_config
+  106  ls
+  107  mkdir obj
+  108  cd obj
+  109  cd ..
+  110  rm -rf obj/
+  111  mkdir emulab-obj
+  112  cd emulab-obj/
+  113  ../emulab-devel.master/clientside/configure
+  114  apt-get update
+  115  apt-get install python3-dev
+  116  ../emulab-devel.master/clientside/configure
+  117  gmake client
+  118  make client
+  119  apt-get install libssl-dev
+  120  make client
+  121  cd ..
+  122  git clone https://gitlab.flux.utah.edu/emulab/pubsub
+  123  cd pubsub/
+  124  ./configure 
+  125  apt-get install libtool
+  126  apt-get install libtool-bin 
+  127  libtool
+  128  apt-get install libtool-bin 
+  129  ./configure 
+  130  make
+  131  history | grep install
+  132  make DESTDIR=~/install install
+  133  find /root/install/
+  134  make  install
+  135  cd ../emulab-obj/
+  136  make client
+  137  apt-get install libpcap-dev 
+  138  make client
+  139  apt-get install libboost-dev
+  140  make client
+  141  make DESTDIR=~/install client-install
+  142  for f in passwd group shadow gshadow ; diff -u ~/install/etc/$f /etc/$f ; done
+  143  for f in passwd group shadow gshadow ; do diff -u ~/install/etc/$f /etc/$f ; done
+  144  find ~/install | grep passwd
+  145  for f in passwd group shadow gshadow ; do diff -u ~/install/etc/emulab/$f /etc/$f ; done
+  146  cp -pRv /etc ~/etc.0
+  147  make client-install
+  148  cd
+  149  ls
+  150  for f in passwd group shadow gshadow ; do diff -u /root/etc.0/$f /etc/emulab/$f ; done
+  151  reboot
+  152  mv /tmp/pkgs.u18 
+  153  mv /tmp/pkgs.u18  .
+  154  ls
+  155  dpkg-query -L bind9-dnsutils
+  156  apt-get remove --purge apparmor libntfs-3g883 
+  157  apt-get remove --purge apparmor 
+  158  df -klhBM /
+  159  apt-get remove --purge ntfs-3g 
+  160  apt-get remove --purge ntfs-3g libntfs-3g883 
+  161  dpkg-reconfigure 
+  162  dpkg-reconfigure --all
+  163  apt-get remove --purge command-not-found
+  164  apt-get remove --purge friendly-recovery
+  165  apt-get remove --purge install-info installation-report
+  166  dpkg-query-L install-info installation-report
+  167  dpkg-query -L install-info installation-report
+  168  fooo
+  169  sudo apt-get update
+  170  foooo
+  171  foo
+  172  apt-get remove --purge laptop-detect 
+  173  apt-get remove --purge logsave
+  174  apt-get remove --purge lz4
+  175  apt-get remove --purge netplan.io
+  176  apt-get remove --purge ubuntu-advantage-tools
+  177  apt-get remove --purge whiptail
+  178  apt-get remove --purge wireless-regdb 
+  179  dpkg-query -l wireless-regdb 
+  180  dpkg-query -L wireless-regdb 
+  181  dpkg-query -L autopoint
+  182  apt-cache search autopoint
+  183  dpkg-query -l | grep binutils
+  184  apt-get install binutils
+  185  apt-get update
+  186  apt-cache search autopoint
+  187  apt-get install autopoint
+  188  apt-get remove --purge autopoint
+  189  apt-cache search perl
+  190  apt-cache search perl-modules
+  191  apt-get install perl
+  192  apt-cache search m2crypto
+  193  apt-get install python3-m2crypto
+  194  apt-get remove --purge python3-m2crypto
+  195  dpkg-query -l rename
+  196  apt-get install apt-transport-https autoconf automake autotools-dev bc binfmt-support binutils bison bridge-utils build-essential byacc command-not-found-data cpp curl debhelper dkms dma ebtables emacs ethtool fakeroot flex g++ gcc gdb gdbserver git iperf iputils-arping iputils-clockdiff jove kexec-tools keyutils ksh lftp rithm-merge-perl lockfile-progs lvm2 lzma mailutils make net-tools nfs-common ntp ntpdate ntpstat open-iscsi openvpn patch perl pkg-config pssh python3-cryptography python3-lxml python3-requests python3-six python3-distutils python3-setuptools python3-software-properties rpcbind screen smartmontools software-properties-common tcsh tmux traceroute unzip vim-nox vlan zip zlib1g-dev zsh
+  197  apt-get install apt-transport-https autoconf automake autotools-dev bc binfmt-support binutils bison bridge-utils build-essential byacc cpp curl debhelper dkms dma ebtables emacs ethtool fakeroot flex g++ gcc gdb gdbserver git iperf iputils-arping iputils-clockdiff jove kexec-tools keyutils ksh lftp lockfile-progs lvm2 lzma mailutils make net-tools nfs-common ntp ntpdate ntpstat open-iscsi openvpn patch perl pkg-config pssh python3-cryptography python3-lxml python3-requests python3-six python3-distutils python3-setuptools python3-software-properties rpcbind screen smartmontools software-properties-common tcsh tmux traceroute unzip vim-nox vlan xterm zip zlib1g-dev zsh
+  198  apt-get install apt-transport-https autoconf automake autotools-dev bc binfmt-support binutils bison bridge-utils build-essential byacc cpp curl debhelper dkms dma ebtables ethtool fakeroot flex g++ gcc gdb gdbserver git iperf iputils-arping iputils-clockdiff jove kexec-tools keyutils ksh lftp lockfile-progs lvm2 lzma mailutils make net-tools nfs-common ntp ntpdate ntpstat open-iscsi openvpn patch perl pkg-config pssh python3-cryptography python3-lxml python3-openssl python3-requests python3-six python3-distutils python3-setuptools python3-software-properties rpcbind screen smartmontools software-properties-common tcsh tmux traceroute unzip vim-nox vlan xterm zip zlib1g-dev zsh
+  199  apt-get install apt-transport-https autoconf automake autotools-dev bc binfmt-support binutils bison bridge-utils build-essential byacc cpp curl debhelper dkms dma ebtables ethtool fakeroot flex g++ gcc gdb gdbserver git iperf iputils-arping iputils-clockdiff jove kexec-tools keyutils ksh lftp lockfile-progs lvm2 lzma mailutils make net-tools nfs-common ntp ntpdate ntpstat open-iscsi openvpn patch perl pkg-config pssh python3-cryptography python3-lxml python3-openssl python3-requests python3-six python3-distutils python3-setuptools python3-software-properties rpcbind screen smartmontools software-properties-common tcsh tmux traceroute unzip vim-nox vlan zip zlib1g-dev zsh
+  200  apt-get install apt-transport-https autoconf automake autotools-dev bc binfmt-support binutils bison bridge-utils build-essential byacc cpp curl debhelper dkms dma ebtables ethtool fakeroot flex g++ gcc gdb gdbserver git iperf iputils-arping iputils-clockdiff jove kexec-tools keyutils ksh lftp lockfile-progs lvm2 lzma mailutils make net-tools nfs-common ntp ntpdate ntpstat open-iscsi openvpn patch perl pkg-config pssh python3-cryptography python3-lxml python3-openssl python3-requests python3-six python3-distutils python3-setuptools python3-software-properties rpcbind screen smartmontools software-properties-common tcsh tmux traceroute unzip vim-nox vlan zip zlib1g-dev zsh emacs
+  201  apt-get install apt-transport-https autoconf automake autotools-dev bc binfmt-support binutils bison bridge-utils build-essential byacc cpp curl debhelper dkms dma ebtables ethtool fakeroot flex g++ gcc gdb gdbserver git iperf iputils-arping iputils-clockdiff jove kexec-tools keyutils ksh lftp lockfile-progs lvm2 lzma mailutils make net-tools nfs-common ntp ntpdate ntpstat open-iscsi openvpn patch perl pkg-config pssh python3-cryptography python3-lxml python3-openssl python3-requests python3-six python3-distutils python3-setuptools python3-software-properties rpcbind screen smartmontools software-properties-common tcsh tmux traceroute unzip vim-nox vlan zip zlib1g-dev zsh emacs-nox
+  202  apt-get install apt-transport-https autoconf automake autotools-dev bc binfmt-support binutils bison bridge-utils build-essential byacc cpp curl debhelper dkms dma ebtables ethtool fakeroot flex g++ gcc gdb gdbserver git iperf iputils-arping iputils-clockdiff jove kexec-tools keyutils ksh lftp lockfile-progs lvm2 lzma mailutils make net-tools nfs-common ntp ntpdate ntpstat open-iscsi openvpn patch perl pkg-config pssh python3-cryptography python3-lxml python3-openssl python3-requests python3-six python3-distutils python3-setuptools python3-software-properties rpcbind screen smartmontools software-properties-common tcsh tmux traceroute unzip vim-nox vlan zip zlib1g-dev zsh 
+  203  apt-get install apt-transport-https autoconf automake autotools-dev bc binfmt-support binutils bison bridge-utils build-essential byacc cpp curl debhelper dkms dma ebtables ethtool fakeroot flex g++ gcc gdb gdbserver git iperf iputils-arping iputils-clockdiff jove kexec-tools keyutils ksh lftp lockfile-progs lvm2 lzma mailutils make net-tools nfs-common ntp ntpdate ntpstat open-iscsi openvpn patch perl pkg-config pssh python3-cryptography python3-lxml python3-openssl python3-requests python3-six python3-distutils python3-setuptools python3-software-properties rpcbind screen smartmontools software-properties-common tcsh tmux traceroute unzip vim-nox vlan zip zlib1g-dev zsh emacs-nox
+  204  apt-get install apt-transport-https autoconf automake autotools-dev bc binfmt-support binutils bison bridge-utils build-essential byacc cpp curl debhelper dkms dma ebtables ethtool fakeroot flex g++ gcc gdb gdbserver git iperf iputils-arping iputils-clockdiff jove kexec-tools keyutils ksh lftp lockfile-progs lvm2 lzma mailutils make net-tools nfs-common ntp ntpdate ntpstat open-iscsi openvpn patch perl pkg-config pssh python3-cryptography python3-lxml python3-openssl python3-requests python3-six python3-distutils python3-setuptools python3-software-properties rpcbind screen smartmontools software-properties-common tcsh tmux traceroute unzip vim-nox vlan zip zlib1g-dev zsh emacs
+  205  apt-get install apt-transport-https autoconf automake autotools-dev bc binfmt-support binutils bison bridge-utils build-essential byacc cpp curl debhelper dkms dma ebtables ethtool fakeroot flex g++ gcc gdb gdbserver git iperf iputils-arping iputils-clockdiff jove kexec-tools keyutils ksh lftp lockfile-progs lvm2 lzma mailutils make net-tools nfs-common ntp ntpdate ntpstat open-iscsi openvpn patch perl pkg-config pssh python3-cryptography python3-lxml python3-openssl python3-requests python3-six python3-distutils python3-setuptools python3-software-properties rpcbind screen smartmontools software-properties-common tcsh tmux traceroute unzip vim-nox vlan zip zlib1g-dev zsh emacs xterm
+  206  apt-get install apt-transport-https autoconf automake autotools-dev bc binfmt-support binutils bison bridge-utils build-essential byacc cpp curl debhelper dkms dma ebtables ethtool fakeroot flex g++ gcc gdb gdbserver git iperf iputils-arping iputils-clockdiff jove kexec-tools keyutils ksh lftp lockfile-progs lvm2 lzma mailutils make net-tools nfs-common ntp ntpdate ntpstat open-iscsi openvpn patch perl pkg-config pssh python3-cryptography python3-lxml python3-openssl python3-requests python3-six python3-distutils python3-setuptools python3-software-properties rpcbind screen smartmontools software-properties-common tcsh tmux traceroute unzip vim-nox vlan zip zlib1g-dev zsh emacs-nox
+  207  apt-get install apt-transport-https autoconf automake autotools-dev bc binfmt-support binutils bison bridge-utils build-essential byacc cpp curl debhelper dkms dma ebtables ethtool fakeroot flex g++ gcc gdb gdbserver git iperf iputils-arping iputils-clockdiff jove kexec-tools keyutils ksh lftp lockfile-progs lvm2 lzma mailutils make net-tools nfs-common ntp ntpdate ntpstat open-iscsi openvpn patch perl pkg-config pssh python3-cryptography python3-lxml python3-openssl python3-requests python3-six python3-distutils python3-setuptools python3-software-properties rpcbind screen smartmontools software-properties-common tcsh tmux traceroute unzip vim-nox vlan zip zlib1g-dev zsh 
+  208  apt-get autoremove --purge mysql-common 
+  209  dpkg-query -L mailutils
+  210  dpkg-query -L dma
+  211  dpkg-query -S /bin/mail
+  212  ls -l /bin/mail
+  213  cat /etc/alternatives/m
+  214  cat /etc/alternatives/mail
+  215  ls -l /etc/alternatives/mail
+  216  apt-get autoremove --purge mysql-common 
+  217  mail
+  218  apt-get clean all
+  219  apt-get install emacs
+  220  apt-get update
+  221  apt-get install emacs
+  222  apt-get install emacs-nox
+  223  apt-get install xterm
+  224  man mail
+  225  ls -l /boot
+  226  df -klhBM /
+  227  apt-get autoremove --purge command-not-found 
+  228  apt-get autoremove --purge libxau6
+  229  hostname
+  230  cat /var/emulab/logs/bootsetup.debug 
+  231  cat /etc/resolv.conf 
+  232  systemctl stop testbed
+  233  ls -l /etc/resolv.conf 
+  234  rm -f /etc/resolv.conf 
+  235  cat /run/systemd/resolve/resolv.conf 
+  236  cp /run/systemd/resolve/resolv.conf /etc
+  237  systemctl restart testbed
+  238  hostname
+  239  cd emulab-devel.master/ipod/linux_mod/
+  240  make deb-dkms
+  241  make deb-dkms-install 
+  242  /usr/local/etc/emulab/rc/rc.ipod 
+  243  lsmod | grep ipod
+  244  systemctl status
+  245  systemctl --list-failed
+  246  systemctl --list-units
+  247  systemctl list-units
+  248  systemctl list-units --all
+  249  systemctl status connman
+  250  fg
+  251  systemctl disable connman
+  252  fg
+  253  systemctl disable NetworkManager
+  254  systemctl list-units
+  255  systemctl disable openvpn
+  256  systemctl disable ufw
+  257  find /etc | grep unatt
+  258  emacs -nw /etc/apt/apt.conf.d/50unattended-upgrades
+  259  jove /etc/apt/apt.conf.d/50unattended-upgrades
+  260  nano /etc/apt/apt.conf.d/50unattended-upgrades
+  261  apt-get remove --purge unattended-upgrades
+  262  rm -rf /var/log/unattended-upgrades/
+  263  dpkg-query -l | grep -i manager
+  264  reboot
+  265  apt-get install unattended-upgrades
+  266  nano /etc/apt/apt.conf.d/50unattended-upgrades
+  267  nano /etc/apt/apt.conf.d/20auto-upgrades 
+  268  dpkg-query -l unattended-upgrades 
+  269  dpkg-query -L unattended-upgrades 
+  270  dpkg-query -L unattended-upgrades  | grep conf
+  271  systemctl disable unattended-upgrades.service 
+  272  ls -l /boot
+  273  ls
+  274  rm -rf emulab-* etc.0 install/ pubsub/
+  275  ls
+  276  df -klhBM /
+  277  apt-get clean all
+  278  rm -f /var/lib/apt/lists/*{Packages,InRelease,Translation}*
+  279  df -klhBM /
+  280  top
+  281  ps axuwww | grep systemd
+  282  ps axuwww | grep fstab
+  283  journalctl -b0
+  284  emacs -nw /etc/fstab 
+  285  nano /etc/fstab 
+  286  reboot
+  287  for f in passwd group shadow gshadow ; do diff -u /etc/emulab/$f /etc/$f ; done
+  288  nano .ssh/authorized_keys
+  289  df -klhBM /
+  290  apt-get update
+  291  apt-get install emacs
+  292  apt-get install emacs-nox
+  293  apt-get install xterm
+  294  apt-get install xterm xauth
+  295  apt-get install emacs xterm xauth
+  296  ls
+  297  du -kh /var
+  298  du -kh /var -d 1
+  299  cd /var/log
+  300  ls
+  301  ls -l
+  302  rm -f /var/log/ubuntu-advantage.log 
+  303  history
+  304  history > ~/install-commands.txt
